@@ -1,0 +1,17 @@
+extends ./commons/layout.pug
+
+
+block header
+      //- link(rel="stylesheet", href='../../build/css/portal.css', type="text/css")
+
+
+block content
+    //-   include ../commons/.jade
+    include ./commons/header.pug
+    include ./commons/navmenu.pug
+    .content
+        .siderbar
+          include ./commons/content-left.pug
+        include ./commons/content-right-outpatient.pug     
+block footer
+    //- script(src='../../build/js/portal.app.js')

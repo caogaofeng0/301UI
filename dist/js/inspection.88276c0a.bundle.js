@@ -1,0 +1,1 @@
+webpackJsonp([2],{"0tjC":function(n,e){},UMz2:function(n,e,o){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var t=o("0tjC");o.n(t);window.onload=function(){}}},["UMz2"]);

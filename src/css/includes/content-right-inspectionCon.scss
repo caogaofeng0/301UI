@@ -1,0 +1,21 @@
+.inspenction-con{
+  .btg{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .btgn{
+    font-size: 16px;
+    color: #255e95;
+    background-color: #e9faff;
+    text-align: center;
+    img{
+      width: 10px;
+      height: 10px;
+    }
+  }
+  td{
+    vertical-align: middle;
+    border: 1px solid #ccc;
+  }
+}

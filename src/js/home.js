@@ -1,4 +1,4 @@
-import '../css/checkUp.scss';
+import '../css/home.scss';
 import './conmons/navmenu';
 
 window.onload = () => {

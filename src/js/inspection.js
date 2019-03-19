@@ -1,4 +1,5 @@
 import '../css/inspection.scss';
+import './conmons/navmenu';
 
 window.onload = () => {
     // let a = document.createElement('a');

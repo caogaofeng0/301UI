@@ -42,6 +42,4 @@ const webpackDev = { // 开发配置文件
     ]
 };
 
-console.log(webpackMerge(webpackBase, webpackDev).module, "--------->");
-
 module.exports = webpackMerge(webpackBase, webpackDev);

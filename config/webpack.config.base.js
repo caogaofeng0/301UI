@@ -91,18 +91,24 @@ module.exports = {
                     pretty: true,
                 }
             }]
-        }]
-    },
-    resolve:{
-        alias:{
-            'jquery': 'jquery/dist/jquery.min.js'
         }
+       ]
     },
+    // resolve:{
+    //     alias:{
+    //         'jquery': 'jquery/dist/jquery.min.js'
+    //     }
+    // },
     plugins: [
         ...HTMLPlugins, // 扩展运算符生成所有HTMLPlugins
         new webpack.ProvidePlugin({
-            jQuery: "jquery",
-            $: "jquery"
-       })
+
+            $:"jquery",
+            
+            jQuery:"jquery",
+            
+            "window.jQuery":"jquery"
+            
+            })
     ]
 };

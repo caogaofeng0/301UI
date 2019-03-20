@@ -1,3 +1,8 @@
-.a {
-    font-size: 16px;
-}
+@import './includes/reset.scss';
+@import './includes/header.scss';
+@import './includes/navmenu.scss';
+@import './includes/global.scss';
+@import './includes/content-left.scss';
+@import './includes/content-left-navBtn.scss';
+@import './includes/content-right.scss';
+@import './includes/content-right-diagnose.scss';

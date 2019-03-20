@@ -10,5 +10,5 @@ trend.onclick = function (e) {
     }
 };
 popHide.onclick = function (e) {
-  pop.setAttribute('class', 'pop  pop-hide')
+  pop.setAttribute('class', 'pop')
 };

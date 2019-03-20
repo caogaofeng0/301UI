@@ -1,0 +1,1 @@
+webpackJsonp([2],{J43Y:function(n,e){},VDRE:function(n,e,o){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var t=o("J43Y"),c=(o.n(t),o("ynX7"));o.n(c);window.onload=function(){}}},["VDRE"]);

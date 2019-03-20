@@ -1,8 +1,8 @@
-var $ = require('jquery');
-var $$ = function (parmas) { 
-     return $(parmas)[0]
- }
-console.log( $$('body'), "-------->");
+// var $ = require('jquery');
+// var $$ = function (parmas) { 
+//      return $(parmas)[0]
+//  }
+// console.log( $$('body'), "-------->");
   const nav = document.querySelector('.nav');
   const navList = document.querySelectorAll('.nav li');
   nav.onclick = function (e) {

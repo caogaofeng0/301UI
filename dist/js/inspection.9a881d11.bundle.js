@@ -1,1 +1,0 @@
-webpackJsonp([2],{"0tjC":function(n,t){},XTUt:function(n,t,e){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var o=e("0tjC");e.n(o),e("ynX7");window.onload=function(){}}},["XTUt"]);

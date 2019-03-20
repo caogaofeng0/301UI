@@ -94,11 +94,14 @@ module.exports = {
         }
        ]
     },
-    // resolve:{
-    //     alias:{
-    //         'jquery': 'jquery/dist/jquery.min.js'
-    //     }
-    // },
+    resolve: {
+        alias: {
+            echarts$: "echarts/src/echarts.js",
+            echarts: "echarts/src",
+            zrender$: "zrender/src/zrender.js",
+            zrender: "zrender/src"
+        }
+    },
     plugins: [
         ...HTMLPlugins, // 扩展运算符生成所有HTMLPlugins
         new webpack.ProvidePlugin({

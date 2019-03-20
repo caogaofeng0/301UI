@@ -2,10 +2,7 @@ extends ./commons/layout.pug
 
 
 block header
-      //- link(rel="stylesheet", href='../../build/css/portal.css', type="text/css")
-
 block content
-    //-   include ../commons/.jade
     include ./commons/header.pug
     include ./commons/navmenu.pug
     .content
@@ -15,4 +12,3 @@ block content
         include ./commons/content-right-diagnose.pug
         
 block footer
-    //- script(src='../../build/js/portal.app.js')

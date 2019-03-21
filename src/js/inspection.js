@@ -25,6 +25,9 @@ popHide.onclick = function (e) {
   pop.style.visibility = 'hidden';
 };
 
+
+
+
 var option = {
   title: {
       text: '折线图堆叠'

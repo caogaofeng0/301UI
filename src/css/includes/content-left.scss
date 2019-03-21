@@ -14,9 +14,6 @@
       padding: 0.6em 0;
       border-bottom: 1px solid #e6e6e6;
       transition: background .6s;
-      &:last-child{
-        border-bottom: none;
-      }
       .sidebar-item_con {
         display: flex;
         flex-direction: column;
@@ -43,31 +40,6 @@
         white-space: nowrap;
         text-overflow: ellipsis;
       }
-      .sidebar-item__anchors{
-        position: relative;
-        // display: none;
-        flex: 0 0 100%;
-        flex-wrap: wrap;
-        margin: 0.35em 0;
-        padding-left: 1.5em;
-        overflow: hidden;
-        list-style: none;
-        line-height: 19px;
-        .sidebar-item__anchor{
-          position: relative;
-          -webkit-box-flex: 0;
-          -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
-          margin: 0.25em 0;
-          padding-left: 1em;
-          overflow: hidden;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          &:first-child{
-            margin-top: 0;
-          }
-        }
-      }
     }
     .active{
       background: #5882EE;
@@ -84,4 +56,59 @@
       }
     }
   }
+}
+
+.sider-arrow{
+  width: 20px;
+  height: 20px;
+  transform:translate(21px, 7px);
+  &::after{
+    content: '';
+    position: absolute;
+    height:10px;
+    width: 10px;
+    border-top: 1px solid #000;
+    border-left: 1px solid #000;
+    // transform: rotate(45deg) translate(10px, 3px);
+    transform: rotate(225deg) translate(-5px, 3px);
+  }
+}
+.sider-arrow-active{
+  &::after{
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    transform: rotate(45deg) translate(10px, 3px);
+  }
+}
+
+.sidebar-item__anchors{
+    width: 100%;
+    .sidebar-item__anchor{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      position: relative;
+      height: 40px;
+      border-bottom: 1px solid #e6e6e6;
+      span{
+        font-size: 12px;
+        color: #061A30;
+        margin-left: 20px;
+      }
+      .course{
+        margin-left: 10px;
+        width: 72px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+      img{
+        width: 20px;
+        height: 20px;
+        transform: translate(-7px, 1px);
+      }
+    }
+    .anchor-active{
+      background: #DBDFE3;
+    }
 }

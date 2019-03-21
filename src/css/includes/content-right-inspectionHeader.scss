@@ -1,16 +1,19 @@
 .inspection-header{
+  padding: 20px 0;
+  font-size: 14px;
+  color: #061A30;
   .btg{
     text-align: center;
-    font-size: 14px;
-    background-color: #e9faff;
+    background: #F6F6F6;
   }
   .con{
-    font-size: 14px;
     text-align: left;
+    background: #FFFFFF;
+    padding-left: 20px;
   }
   td{
     vertical-align: middle;
-    border: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
   }
 }
 

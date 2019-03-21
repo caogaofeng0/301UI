@@ -1,25 +1,50 @@
 .check-up {
-  width: 100%;
-  table{
-    width: 100%;
-  }
+  padding: 20px 0;
+  margin-right: 20px;
+  font-size: 14px;
+  color: #061A30;
   .btg{
     text-align: center;
-    font-size: 14px;
-    background-color: #e9faff;
+    background: #F6F6F6;
   }
-  .con{
-    font-size: 14px;
-    text-align: left;
+  .con-img{
+    width: 179px;
+    position: relative;
+    .back{
+      position: absolute;
+      width: 179px;
+      height: 80px;
+      background: rgba(0,0,0,0.50);
+      z-index: 4;
+      top: 0;
+      left: 0;
+    }
+    span{
+      position: absolute;
+      border: 1px solid #FFFFFF;
+      border-radius: 2px;
+      width: 80px;
+      height: 32px;
+      color: #fff;
+      left: calc(50% - 40px);
+      top: calc(50% - 16px);
+      z-index: 8;
+      text-align: center;
+      line-height: 32px;
+      cursor: default;
+    }
+    img{
+      width: 100%;
+      height: 100%;
+    }
   }
   td{
     vertical-align: middle;
-    border: 1px solid #ccc;
-    text-align: center;
-    img{
-      width: 20px;
-      height: 30px;
-    }
+    border-bottom: 1px solid #ccc;
+  }
+  .con{
+    text-align: left;
+    padding-left: 20px;
   }
   .check-up-arg{
     margin-top:20px;

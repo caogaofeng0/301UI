@@ -7,6 +7,9 @@ block content
     include ./commons/navmenu.pug
     .content
         .siderbar
-            include ./commons/content-left.pug
+            ul.sidebar__inner
+                include ./commons/left/arrow.pug
+                include ./commons/left/arrowList.pug
+                include ./commons/left/arrow.pug
         include ./commons/content-right-case.pug
 block footer

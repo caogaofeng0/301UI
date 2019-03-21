@@ -7,7 +7,13 @@ block content
     include ./commons/navmenu.pug
     .content
         .siderbar
-          include ./commons/content-left.pug
+          ul.sidebar__inner
+                include ./commons/left/arrow.pug
+                include ./commons/left/arrowList.pug
+                include ./commons/left/arrow.pug
+                include ./commons/left/list.pug
+                include ./commons/left/list.pug
+                include ./commons/left/list.pug
         .siderSet
           include ./commons/content-right-inspectionHeader.pug
           include ./commons/content-right-inspectionCon.pug

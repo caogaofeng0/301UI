@@ -70,21 +70,21 @@ const webpackProd = { // 生产配置文件
             name: 'commons', // 指定公共 bundle 的名称。HTMLWebpackPlugin才能识别
             filename: 'js/commons.[chunkhash:8].bundle.js'
         }),
-        new UglifyJSPlugin({
-            uglifyOptions:{
-                compress:{
-                    warnings:false,
-                    drop_console:true,
-                    collapse_vars:true,
-                    reduce_vars:true,
-                },
-                output:{
-                    beautify:false,
-                    comments:false,
-                }
-            }
+        // new UglifyJSPlugin({
+        //     uglifyOptions:{
+        //         compress:{
+        //             warnings:false,
+        //             drop_console:true,
+        //             collapse_vars:true,
+        //             reduce_vars:true,
+        //         },
+        //         output:{
+        //             beautify:false,
+        //             comments:false,
+        //         }
+        //     }
            
-        }),
+        // }),
     ]
 };
 

@@ -1,1 +1,0 @@
-webpackJsonp([1],{"5Ncg":function(n,e,o){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var c=o("jjez"),t=(o.n(c),o("ynX7"));o.n(t);window.onload=function(){}},jjez:function(n,e){}},["5Ncg"]);

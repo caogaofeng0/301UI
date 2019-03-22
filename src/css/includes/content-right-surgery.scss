@@ -1,19 +1,10 @@
 .surgery {
   width: 100%;
-  .btg{
-    text-align: center;
-    font-size: 18px;
-    font-weight: 600;
+  margin-left: 20px;
+  table{
+    td{
+      vertical-align: middle;
+    }
   }
   
-  .btgn{
-    font-size: 16px;
-    color: #255e95;
-    background-color: #e9faff;
-    text-align: center;
-  }
-  td{
-    vertical-align: middle;
-    border: 1px solid #ccc;
-  }
 }

@@ -1,30 +1,24 @@
 .siderbar-btm{
   width: 100%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 50px;
-  z-index: 5;
-  background-color: #fff;
+  height: 40px;
   ul{
     width: 100%;
     height: 100%;
     display: flex;
-    border: 1px solid #ccc;
     flex-direction: row;
     li{
       flex: 1;
       height: 100%;
-      border-right: 1px solid #ccc;
       display: flex;
       justify-content: center;
       align-items: center;
-      &:last-child{
-        border-right: none;
-      }
+      font-size: 14px;
+      color: #FFFFFF;
+      background: #003573;
     }
     .active{
-      background-color: aquamarine;
+      background-color: #fff;
+      color: #061A30;
     }
   }
 }

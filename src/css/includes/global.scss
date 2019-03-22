@@ -5,6 +5,7 @@
   display: flex;
   margin: 20px;
   margin-bottom: 0;
+  min-height: 100vh;
   table{
     thead{
       tr{
@@ -50,5 +51,5 @@
   margin-left: 20px;
 }
 html{
-  background-color: rgb(215, 225, 229)
+  background-color: #F6F6F6;
 }

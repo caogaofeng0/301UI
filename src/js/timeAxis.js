@@ -1,199 +1,127 @@
 import '../css/timeAxis.scss';
 import './conmons/navmenu';
+// import 'Swiper/dist/css/swiper.css';
 
-var echarts = require("echarts");
-require('echarts/src/component/dataZoom');
-require('echarts/chart/line');
-require('echarts/chart/bar');
+var Swiper = require("Swiper/dist/js/swiper.min.js");
 
-require('echarts/chart/scatter');
-require('echarts/src/component/tooltip');
-require('echarts/src/component/title');
-require('echarts/src/component/dataZoom');
-
-
-
-/** 
- * 时间轴
- */
-// let app = {};
-// app.title = '世界人口总量 - 条形图';
-
-// let option = {
-//     title: {
-//         text: '世界人口总量',
-//         subtext: '数据来自网络'
-//     },
-//     // tooltip: {
-//     //     trigger: 'axis',
-//     //     axisPointer: {
-//     //         type: 'shadow'
-//     //     }
-//     // },
-//     grid: {
-//         left: '3%',
-//         right: '4%',
-//         bottom: '3%',
-//         containLabel: true
-//     },
-//     xAxis: {
-//         type:'time',
-//         data:['2012','2013','2014','2015']
-//     },
-//     yAxis: {
-//         type: 'category',
-//         data: ['巴西','印尼','美国','印度']
-//     },
-//     series: [
-//         {
-//             name: '2012',
-//             type: 'scatter',
-//             data: ['巴西', '印尼',]
-//         },
-//         {
-//             name: '2013',
-//             type: 'scatter',
-//             data: ['美国', '印尼',]
-//         },
-//         {
-//             name: '2014',
-//             type: 'scatter',
-//             data: ['巴西', '印度',]
-//         },
-//         {
-//             name: '2015',
-//             type: 'scatter',
-//             data: ['巴西', '美国',]
-//         },
-//     ]
-// };
-
-// var data = [];
-// var dataCount = 10;
-// var startTime = +new Date();
-// var categories = ['categoryA', 'categoryB', 'categoryC'];
-// var types = [
-//     {name: 'JS Heap', color: '#7b9ce1'},
-//     {name: 'Documents', color: '#bd6d6c'},
-//     {name: 'Nodes', color: '#75d874'},
-//     {name: 'Listeners', color: '#e0bc78'},
-//     {name: 'GPU Memory', color: '#dc77dc'},
-//     {name: 'GPU', color: '#72b362'}
-// ];
-
-// Generate mock data
-// echarts.util.each(categories, function (category, index) {
-//     var baseTime = startTime;
-//     for (var i = 0; i < dataCount; i++) {
-//         var typeItem = types[Math.round(Math.random() * (types.length - 1))];
-//         var duration = Math.round(Math.random() * 10000);
-//         data.push({
-//             name: typeItem.name,
-//             value: [
-//                 index,
-//                 baseTime,
-//                 baseTime += duration,
-//                 duration
-//             ],
-//             itemStyle: {
-//                 normal: {
-//                     color: typeItem.color
-//                 }
-//             }
-//         });
-//         baseTime += Math.round(Math.random() * 2000);
-//     }
-// });
-
-// function renderItem(params, api) {
-//     var categoryIndex = api.value(0);
-//     var start = api.coord([api.value(1), categoryIndex]);
-//     var end = api.coord([api.value(2), categoryIndex]);
-//     var height = api.size([0, 1])[1] * 0.6;
-
-//     var rectShape = echarts.graphic.clipRectByRect({
-//         x: start[0],
-//         y: start[1] - height / 2,
-//         width: end[0] - start[0],
-//         height: height
-//     }, {
-//         x: params.coordSys.x,
-//         y: params.coordSys.y,
-//         width: params.coordSys.width,
-//         height: params.coordSys.height
-//     });
-
-//     return rectShape && {
-//         type: 'rect',
-//         shape: rectShape,
-//         style: api.style()
-//     };
-// }
+var modifier = 2; //每天的px
+var historyList = [{
+		"detail": "Swiper中文网上线",
+		"date": "2014-11-21"
+	},
+	{
+		"detail": "Swiper3.x版本上线",
+		"date": "2015-02-11"
+	},
+	{
+		"detail": "Swiper交友群开通",
+		"date": "2015-02-26"
+	},
+	{
+		"detail": "Swiper3.0.4，图片延迟加载",
+		"date": "2015-03-06"
+	},
+	{
+		"detail": "Swiper资源论坛上线[<a href='http://bbs.swiper.com.cn' target='_blank'>下载资源</a>]",
+		"date": "2015-03-22"
+	},
+	{
+		"detail": "Swiper交友群扩容至1000人",
+		"date": "2015-07-27"
+	},
+	{
+		"detail": "Swiper3.2.0，响应式设置",
+		"date": "2015-11-07"
+	},
+	{
+		"detail": "Swiper3.3.0，导航条样式增加",
+		"date": "2016-01-10"
+	},
+	{
+		"detail": "获得百度认证[<a href='https://www.baidu.com/s?wd=swiper' target='_blank'>看认证情况</a>]",
+		"date": "2016-05-27"
+	},
+	{
+		"detail": "Swiper3.4.0，变焦和历史状态",
+		"date": "2016-10-16"
+	},
+	{
+		"detail": "Swiper交友群人数达到2000",
+		"date": "2017-01-19"
+	},
+	{
+		"detail": "Swiper3.4.2",
+		"date": "2017-03-10"
+	},
+	{
+		"detail": "众多知名网站将Swiper作为滑动插件首选",
+		"date": "2017-05-20"
+	},
+	{
+		"detail": "Swiper4.0测试版上线",
+		"date": "2017-08-30"
+	},
+];
 
 
-// var option = {
-//     tooltip: {
-//         formatter: function (params) {
-//             return params.marker + params.name + ': ' + params.value[3] + ' ms';
-//         }
-//     },
-//     title: {
-//         text: 'Profile',
-//         left: 'center'
-//     },
-//     dataZoom: [{
-//         type: 'slider',
-//         filterMode: 'weakFilter',
-//         showDataShadow: false,
-//         top: 400,
-//         height: 10,
-//         borderColor: 'transparent',
-//         backgroundColor: '#e2e2e2',
-//         handleIcon: 'M10.7,11.9H9.3c-4.9,0.3-8.8,4.4-8.8,9.4c0,5,3.9,9.1,8.8,9.4h1.3c4.9-0.3,8.8-4.4,8.8-9.4C19.5,16.3,15.6,12.2,10.7,11.9z M13.3,24.4H6.7v-1.2h6.6z M13.3,22H6.7v-1.2h6.6z M13.3,19.6H6.7v-1.2h6.6z', // jshint ignore:line
-//         handleSize: 20,
-//         handleStyle: {
-//             shadowBlur: 6,
-//             shadowOffsetX: 1,
-//             shadowOffsetY: 2,
-//             shadowColor: '#aaa'
-//         },
-//         labelFormatter: ''
-//     }, {
-//         type: 'inside',
-//         filterMode: 'weakFilter'
-//     }],
-//     grid: {
-//         height:300
-//     },
-//     xAxis: {
-//         min: startTime,
-//         scale: true,
-//         axisLabel: {
-//             formatter: function (val) {
-//                 return Math.max(0, val - startTime) + ' ms';
-//             }
-//         }
-//     },
-//     yAxis: {
-//         data: categories
-//     },
-//     series: [{
-//         type: 'custom',
-//         renderItem: renderItem,
-//         itemStyle: {
-//             normal: {
-//                 opacity: 0.8
-//             }
-//         },
-//         encode: {
-//             x: [1, 2],
-//             y: 0
-//         },
-//         data: data
-//     }]
-// };
-        console.log(option, '-------->');
+var mySwiper = new Swiper('#swiper-history .swiper-container', {
+	virtualTranslate: true,
+	preventClicks: false,
+	navigation: {
+		nextEl: '#swiper-history .swiper-button-next',
+		prevEl: '#swiper-history .swiper-button-prev',
+	},
+	pagination: {
+		el: '#swiper-history .swiper-pagination',
+		clickable: true,
+		renderBullet: function (index, className) {
+			if (index > 0) {
+				var day1 = new Date(historyList[index]['date'].replace(/-/g, "/"));
+				var day2 = new Date(historyList[index - 1]['date'].replace(/-/g, "/"));
+				var time = day1 - day2
+				var marginLeft = parseInt(time / (1000 * 60 * 60 * 24)) * modifier;
+			} else {
+				var marginLeft = 0
+			}
+			return '<span class="' + className + '" style="margin-left:' + marginLeft + 'px;"></span>';
 
+		},
+	},
+	on: {
+		init: function () {
+			var mySlides = '';
+			for (var i = 0; i < historyList.length; i++) {
+				this.appendSlide('<div class="swiper-slide slide' + i + '"><span class="detail">' + historyList[i]['detail'] + '</span><span class="date">' + historyList[i]['date'] + '</span></div>');
+				this.slides[i].style.transform = 'translate3d(' + (-i) * this.width + 'px, 0px, 0px)';
+			}
+			this.slideTo(13);
+		},
+		slideChangeTransitionStart: function () {
+			var detailPrev = this.slides[this.previousIndex].querySelector('.detail');
+			var datePrev = this.slides[this.previousIndex].querySelector('.date');
+			detailPrev.offsetHeight;
+			datePrev.offsetHeight;
+			this.slides[this.previousIndex].style.zIndex = 1;
+			detailPrev.style.opacity = datePrev.style.opacity = 0;
+			detailPrev.style.transform = datePrev.style.transform = 'translate3d(0px, 0px, 0px)';
 
-        var myChart = echarts.init(document.getElementById('main'));
-        myChart.setOption(option);
+			var detailActive = this.slides[this.activeIndex].querySelector('.detail');
+			var dateActive = this.slides[this.activeIndex].querySelector('.date')
+			detailActive.offsetHeight;
+			dateActive.offsetHeight;
+			this.slides[this.activeIndex].style.zIndex = 999;
+			detailActive.style.opacity = dateActive.style.opacity = 1;
+			detailActive.style.transform = 'translate3d(0px, 10px, 0px)';
+			dateActive.style.transform = 'translate3d(0px, -10px, 0px)';
+
+			var moveDay1 = new Date(historyList[this.activeIndex]['date'].replace(/-/g, "/"));
+			var moveDay2 = new Date(historyList[0]['date'].replace(/-/g, "/"));
+			var moveTime = moveDay1 - moveDay2
+			var moveDistance = parseInt(moveTime / (1000 * 60 * 60 * 24)) * modifier + 10 * this.activeIndex;
+			var move = this.width / 2 - 5 - moveDistance;
+
+			this.$el.find(".swiper-pagination").css('left', move + 'px'); //pagination会重新渲染，因此不能用this.pagination.$el
+		},
+	},
+
+});

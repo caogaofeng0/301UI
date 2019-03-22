@@ -7,8 +7,9 @@ block content
     include ./commons/navmenu.pug
     .content
         .siderbar
+          include ./commons/content-left-navBtn.pug
           include ./commons/content-left.pug
-        .siderSet
+        .siderSet.adice-con
           include ./commons/content-right-advice.pug
           include ./commons/pagination.pug
 block footer
